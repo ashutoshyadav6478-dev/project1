@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Guest House Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- TOP SECTION -->
+    <header>
+        <h1>College Guest House</h1>
+        <p>Visiting Parent Room Booking System</p>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#booking">Book a Room</a>
+        <a href="#availability">Availability</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- INTRODUCTION -->
+        <section class="intro" id="home">
+            <h2>Welcome to Our Guest House</h2>
+            <p>
+                Book a comfortable room for parents and visitors
+                during their visit to the college.
+            </p>
+        </section>
+
+        <!-- ROOM DETAILS -->
+        <section id="rooms">
+            <h2>Our Room Types</h2>
+
+            <div class="room-list">
+
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=80"
+                         alt="Standard double room">
+                    <h3>Standard Double Room</h3>
+                    <p>Two comfortable beds with basic facilities.</p>
+                    <p>Amenities: Wi-Fi, TV, attached bathroom.</p>
+                    <p class="price">₹1,000 per night</p>
+                </div>
+
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=80"
+                         alt="Executive AC suite">
+                    <h3>Executive AC Suite</h3>
+                    <p>A comfortable air-conditioned room.</p>
+                    <p>Amenities: Wi-Fi, TV, AC, attached bathroom.</p>
+                    <p class="price">₹1,800 per night</p>
+                </div>
+
+                <div class="room-card">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80"
+                         alt="VIP suite">
+                    <h3>VIP Suite</h3>
+                    <p>A spacious room with premium facilities.</p>
+                    <p>Amenities: Wi-Fi, TV, AC, lounge area.</p>
+                    <p class="price">₹2,500 per night</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BOOKING FORM -->
+        <section class="booking-box" id="booking">
+            <h2>Guest Room Booking Form</h2>
+
+            <form id="bookingForm">
+
+                <label for="parentName">Parent / Guest Name</label>
+                <input type="text" id="parentName"
+                       placeholder="Enter guest name" required>
+
+                <label for="rollNumber">Student Roll Number</label>
+                <input type="text" id="rollNumber"
+                       placeholder="Enter student roll number" required>
+
+                <label for="idProof">ID Proof Details</label>
+                <input type="text" id="idProof"
+                       placeholder="Enter ID proof type and last 4 digits" required>
+
+                <label for="roomType">Select Room Type</label>
+                <select id="roomType" required>
+                    <option value="1000">Standard Double Room - ₹1,000/night</option>
+                    <option value="1800">Executive AC Suite - ₹1,800/night</option>
+                    <option value="2500">VIP Suite - ₹2,500/night</option>
+                </select>
+
+                <div class="form-row">
+                    <div>
+                        <label for="checkIn">Check-in Date</label>
+                        <input type="date" id="checkIn" required>
+                    </div>
+
+                    <div>
+                        <label for="checkOut">Check-out Date</label>
+                        <input type="date" id="checkOut" required>
+                    </div>
+                </div>
+
+                <label for="mealPlan">Meal Plan</label>
+                <select id="mealPlan">
+                    <option value="0">No Meal Plan - Free</option>
+                    <option value="150">Breakfast - ₹150 per night</option>
+                    <option value="300">Breakfast and Dinner - ₹300 per night</option>
+                </select>
+
+                <!-- JAVASCRIPT WILL UPDATE THESE VALUES -->
+                <div class="calculation">
+                    <p>Number of Nights: <strong id="nights">0</strong></p>
+                    <p>Room Charge: <strong id="roomCharge">₹0</strong></p>
+                    <p>Meal Charge: <strong id="mealCharge">₹0</strong></p>
+                    <p>Total Amount: <strong id="totalAmount">₹0</strong></p>
+                </div>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+
+            <!-- BOOKING MESSAGE -->
+            <div id="confirmation"></div>
+        </section>
+
+        <!-- SAMPLE AVAILABILITY -->
+        <section class="availability-box" id="availability">
+            <h2>Room Availability</h2>
+            <p>This is a sample availability display for demonstration.</p>
+
+            <span class="status open">Room 101 - Open</span>
+            <span class="status booked">Room 102 - Booked</span>
+            <span class="status open">Room 103 - Open</span>
+            <span class="status booked">Room 104 - Booked</span>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>College Guest House Booking System</p>
+        <p>Student Project - Frontend Demonstration</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
